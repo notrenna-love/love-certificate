@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Letter</title>
+
+<style>
+
+body{
+
+font-family:Arial;
+
+background:#fff6f8;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+height:100vh;
+
+}
+
+.card{
+
+background:white;
+
+padding:40px;
+
+border-radius:20px;
+
+box-shadow:0 10px 30px rgba(0,0,0,.15);
+
+text-align:center;
+
+width:350px;
+
+}
+
+input{
+
+width:100%;
+
+padding:12px;
+
+margin-top:20px;
+
+font-size:16px;
+
+}
+
+button{
+
+margin-top:20px;
+
+padding:12px 25px;
+
+background:#ff6b9d;
+
+color:white;
+
+border:none;
+
+border-radius:10px;
+
+cursor:pointer;
+
+}
+
+#error{
+
+color:red;
+
+margin-top:15px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<h2>💌</h2>
+
+<h3>A New Certificate Is Waiting For BAO LUONG</h3>
+
+<p>Enter our secret code</p>
+
+<input id="password">
+
+<button onclick="check()">Unlock</button>
+
+<p id="error"></p>
+
+</div>
+
+<script>
+
+const PASSWORD="tanning";
+
+const LETTER="https://aromatic-noodle-96c.notion.site/Certificates-for-Bao-Luong-3ab106c4ee0b8094ab13caa9c8d2f462?source=copy_link";
+
+function check(){
+
+const input=document.getElementById("password").value;
+
+if(input===PASSWORD){
+
+window.location.href=LETTER;
+
+}else{
+
+document.getElementById("error").innerHTML="Wrong password ❤️";
+
+}
+
+}
+
+</script>
+
+</body>
+
+</html>
